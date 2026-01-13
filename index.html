@@ -3,183 +3,187 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Người đàn ông lạnh nhất lúc này</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Vua Lọ Miền Nam - Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     
     <style>
       /* --- CÀI ĐẶT CHUNG --- */
       body {
-        font-family: 'Roboto', sans-serif; /* Sử dụng font chữ hiện đại */
-        /* ĐỔI MÀU NỀN CHÍNH SANG TÍM ĐẬM */
-        background-color: #2e003e; /* Màu tím đậm */
-        color: #e0e0e0; /* Màu chữ trắng ngà cho dễ đọc */
+        font-family: 'Roboto', sans-serif;
+        /* Tạo nền gradient tím đen nhìn sâu thẳm hơn */
+        background: linear-gradient(135deg, #2e003e 0%, #12001f 100%);
+        color: #ebd6ff; /* Màu chữ tím phấn nhạt cực sang */
         line-height: 1.6;
         margin: 0;
         padding: 20px;
+        min-height: 100vh; /* Đảm bảo nền phủ kín màn hình */
         display: flex;
         justify-content: center;
+        align-items: center; /* Căn giữa dọc màn hình luôn */
       }
 
       /* Khung chứa nội dung chính */
       .container {
-        /* ĐỔI MÀU NỀN KHUNG CHỨA SANG TÍM NHẠT HƠN */
-        background-color: #3a0a4d; /* Màu tím trung bình */
+        background-color: rgba(58, 10, 77, 0.95); /* Màu tím bán trong suốt */
         max-width: 800px;
         width: 100%;
-        padding: 30px;
-        border-radius: 15px; /* Bo tròn góc */
-        /* Đổi màu bóng đổ sang tím neon */
-        box-shadow: 0 0 20px rgba(180, 0, 255, 0.3);
+        padding: 40px 30px;
+        border-radius: 20px;
+        /* Viền mỏng màu vàng kim */
+        border: 1px solid #ffd700; 
+        /* Bóng đổ tím neon phát sáng */
+        box-shadow: 0 0 30px rgba(162, 0, 255, 0.4);
       }
 
       /* --- TIÊU ĐỀ --- */
       h1 {
-        color: #00d4ff; /* Màu xanh neon nổi bật */
+        color: #ffd700; /* VÀNG KIM LOẠI */
         text-align: center;
         text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 30px;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        font-weight: 900; /* Siêu đậm */
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+        /* Hiệu ứng bóng chữ vàng rực */
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+        font-size: 2.2rem;
       }
 
       h4 {
-        color: #ffdd00; /* Màu vàng cho tiêu đề phụ */
-        border-bottom: 2px solid #00d4ff;
+        color: #00e5ff; /* XANH CYAN NEON - Tương phản với tím */
+        border-bottom: 2px solid #00e5ff;
         display: inline-block;
         padding-bottom: 5px;
-        margin-top: 25px;
+        margin-top: 10px;
+        font-size: 1.3rem;
+        text-shadow: 0 0 5px rgba(0, 229, 255, 0.5);
       }
 
       /* --- ĐOẠN VĂN --- */
       p {
         margin-bottom: 15px;
+        font-size: 1.05rem;
       }
 
       /* --- DANH SÁCH --- */
       ol {
-        /* ĐỔI NỀN DANH SÁCH SANG TÍM TỐI */
         background-color: #240030;
-        padding: 20px 40px;
-        border-radius: 10px;
-        border: 1px solid #00d4ff;
+        padding: 20px 20px 20px 50px;
+        border-radius: 15px;
+        /* Viền đứt đoạn màu vàng */
+        border: 2px dashed #ffd700;
       }
 
       ol li {
-        margin-bottom: 8px;
+        margin-bottom: 10px;
         font-weight: bold;
+        color: #fff;
       }
       
-      /* Tô màu đặc biệt cho các mục "nhạy cảm" */
-      ol li:nth-child(4), ol li:nth-child(5) {
-          color: #ffdd00; 
+      /* Tô màu đặc biệt cho các mục "Lọ" - Cảnh báo đỏ cam */
+      ol li:nth-child(4), ol li:nth-child(5), ol li:nth-child(6) {
+          color: #ff6b6b; /* Đỏ cam neon */
+          text-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
       }
 
       /* --- LIÊN KẾT (LINK DẠNG CHỮ) --- */
       a.text-link {
-        color: #ffdd00; /* Màu vàng cho link */
+        color: #00e5ff; /* Xanh Cyan */
         text-decoration: none;
         font-weight: bold;
-        transition: all 0.3s ease; /* Hiệu ứng chuyển động mượt */
-        border-bottom: 1px dotted #ffdd00;
+        transition: all 0.3s ease;
+        border-bottom: 1px dotted #00e5ff;
       }
 
       a.text-link:hover {
-        color: #00d4ff; /* Di chuột vào đổi sang màu xanh */
-        border-bottom: 1px solid #00d4ff;
+        color: #ffd700; /* Di chuột vào hóa vàng */
+        border-bottom: 1px solid #ffd700;
+        text-shadow: 0 0 8px #ffd700;
       }
 
       /* --- CÁC KHỐI CHỨA (DIV) --- */
-      .achievement-block, .footer-block {
-        margin-top: 25px;
+      .achievement-block {
+        margin-top: 30px;
         padding: 20px;
-        /* ĐỔI NỀN KHỐI CHỨA SANG TÍM ĐẬM */
-        background-color: #2e003e;
-        border-radius: 10px;
+        background: linear-gradient(45deg, #4b0082, #2e003e);
+        border-radius: 12px;
         text-align: center;
-        border: 1px solid #551a8b; /* Viền tím */
+        border: 1px solid #ffd700; /* Viền vàng */
+        box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
       }
       
+      .footer-block {
+        margin-top: 30px;
+        text-align: center;
+      }
+
       .highlight-span {
           display: block;
           margin-top: 30px;
           font-weight: bold;
-          color: #00d4ff;
+          font-size: 1.1rem;
+          color: #ffd700; /* Chữ vàng */
       }
 
       /* --- HÌNH ẢNH --- */
       img {
-        border-radius: 10px;
-        border: 3px solid #ffdd00; /* Viền vàng quanh ảnh */
-        box-shadow: 0 0 15px rgba(255, 221, 0, 0.5); /* Phát sáng vàng */
-        max-width: 100%; /* Ảnh tự co nhỏ trên điện thoại */
+        border-radius: 15px;
+        border: 4px solid #ffd700; /* Viền vàng dày */
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        max-width: 100%;
         height: auto;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         transition: transform 0.3s ease;
       }
       
       img:hover {
-          transform: scale(1.02); /* Phóng to nhẹ khi di chuột vào ảnh */
+          transform: scale(1.03) rotate(-1deg); /* Nghiêng nhẹ khi hover */
       }
 
-      /* --- NÚT BẤM MỚI (BUTTON) --- */
+      /* --- NÚT BẤM (BUTTON) VIP --- */
       .purple-button {
         display: inline-block;
-        margin-top: 20px;
-        padding: 15px 30px;
-        background-color: #6a0080; /* Màu nền tím của nút */
-        color: #ffffff; /* Màu chữ trắng */
+        margin-top: 25px;
+        padding: 16px 35px;
+        /* Nền Gradient Tím Hồng */
+        background: linear-gradient(90deg, #6a0080, #b400ff);
+        color: #fff;
         text-decoration: none;
-        font-weight: bold;
-        font-size: 16px;
-        border-radius: 50px; /* Bo tròn nút */
-        border: 2px solid #b400ff; /* Viền tím sáng */
-        box-shadow: 0 0 10px rgba(180, 0, 255, 0.5); /* Hiệu ứng phát sáng tím */
-        transition: all 0.3s ease;
-      }
-
-      .purple-button:hover {
-        background-color: #b400ff; /* Đổi màu nền khi di chuột */
-        box-shadow: 0 0 20px rgba(180, 0, 255, 0.8); /* Phát sáng mạnh hơn */
-        transform: translateY(-3px); /* Nút nảy lên nhẹ */
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Vua Lọ Miền Nam</h1>
-      <h4>Ta tên Nguyễn Minh Thiện</h4>
-      <p>
-        Là sinh viên ngành ATTT đang học tại trường Đại học Sư Phạm Kỹ Thuật TP.HCM.<br />
-        Là một người rất tinh tế và thân thiện với mọi người, yêu thương động vật và hay rượt chó mèo.<br />
-        Tôi đến từ Tiền Giang. Và đây là đôi chút về việc thích làm của tôi.
+        font-weight: 900;
+        font-size: 18px;
+        text-transform: uppercase;
+        border-radius: 50px;
+        border: 3px solid #ffd700; /* Viền vàng kta.
       </p>
       
-      <p>Danh sách việc thích làm của ta gồm:</p>
+      <p style="color: #ffd700; font-weight: bold;">📜 Danh sách việc thích làm của ta gồm:</p>
       <ol>
-        <li>Ăn</li>
-        <li>Ngủ</li>
-        <li>Nghe nhạc</li>
-        <li>Lọ</li>
-        <li style="text-transform: uppercase;">Lọ gấp đôi</li>
-        <li>Vừa nghe nhạc vừa Lọ</li>
+        <li>Ăn </li>
+        <li>Ngủ </li>
+        <li>Nghe nhạc </li>
+        <li>Lọ </li>
+        <li style="text-transform: uppercase;">Lọ gấp đôi </li>
+        <li>Vừa nghe nhạc vừa Lọ 🤯</li>
       </ol>
       
-      <span class="highlight-span">Cuối cùng đây là thành tựu đạt được của tôi:</span>
+      <span class="highlight-span"> Cuối cùng đây là thành tựu đạt được:</span>
       
       <div class="achievement-block">
-        <a href="https://www.facebook.com/profile.php?id=61558694875956&mibextid=ZbWKwL" target="_blank" class="text-link"> Trở Thành Bá Vương Đột Phá Cảnh Giới Lọ Đại Đế 😱</a>
+        <a href="https://www.facebook.com/profile.php?id=61558694875956&mibextid=ZbWKwL" target="_blank" class="text-link" style="font-size: 1.1em;"> 
+            Trở Thành Bá Vương Đột Phá Cảnh Giới Lọ Đại Đế 🏆
+        </a>
       </div>
       
       <div class="footer-block">
         <img src="https://a.pinatafarm.com/600x333/4cecf4fb42/lord-farquaad.jpg" width="300" height="250" alt="Lord Farquaad meme" />
-        <p>Giới thiệu của ta đến đây là hết. Nếu ngươi có câu hỏi nào với đại vương lòng bấm vào link dưới đây để đặt câu hỏi:</p>
         
-        <a href="https://youtu.be/dQw4w9WgXcQ?si=vaeqZmypvXLRdKux" target="_blank" class="text-link">Đặt câu hỏi tại đây? </a>
+        <p>Giới thiệu của ta đến đây là hết. Nếu ngươi có câu hỏi nào với đại vương vui lòng bấm vào link dưới đây:</p>
+        
+        <a href="https://youtu.be/dQw4w9WgXcQ?si=vaeqZmypvXLRdKux" target="_blank" class="text-link"> Đặt câu hỏi tại đây? </a>
         
         <br><br>
         
         <a href="https://youtu.be/dQw4w9WgXcQ?si=qjbpqvsDDPrAUERC" target="_blank" class="purple-button">
-             Xem Thiện Lọ
+             Xem Thiện Lọ 
         </a>
       </div>
     </div>

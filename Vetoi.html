@@ -7,28 +7,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
+      /* --- CÀI ĐẶT CHUNG --- */
       body {
-        font-family: 'Roboto', sans-serif; 
-        background-color: #1a1a2e;
-        color: #e0e0e0;
+        font-family: 'Roboto', sans-serif; /* Sử dụng font chữ hiện đại */
+        /* ĐỔI MÀU NỀN CHÍNH SANG TÍM ĐẬM */
+        background-color: #2e003e; /* Màu tím đậm */
+        color: #e0e0e0; /* Màu chữ trắng ngà cho dễ đọc */
         line-height: 1.6;
         margin: 0;
         padding: 20px;
         display: flex;
         justify-content: center;
       }
-      
+
+      /* Khung chứa nội dung chính */
       .container {
-        background-color: #16213e; 
+        /* ĐỔI MÀU NỀN KHUNG CHỨA SANG TÍM NHẠT HƠN */
+        background-color: #3a0a4d; /* Màu tím trung bình */
         max-width: 800px;
         width: 100%;
         padding: 30px;
-        border-radius: 15px; 
-        box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+        border-radius: 15px; /* Bo tròn góc */
+        /* Đổi màu bóng đổ sang tím neon */
+        box-shadow: 0 0 20px rgba(180, 0, 255, 0.3);
       }
 
+      /* --- TIÊU ĐỀ --- */
       h1 {
-        color: #00d4ff;
+        color: #00d4ff; /* Màu xanh neon nổi bật */
         text-align: center;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -37,18 +43,22 @@
       }
 
       h4 {
-        color: #ffdd00; 
+        color: #ffdd00; /* Màu vàng cho tiêu đề phụ */
         border-bottom: 2px solid #00d4ff;
         display: inline-block;
         padding-bottom: 5px;
         margin-top: 25px;
       }
+
+      /* --- ĐOẠN VĂN --- */
       p {
         margin-bottom: 15px;
       }
 
+      /* --- DANH SÁCH --- */
       ol {
-        background-color: #0f3460;
+        /* ĐỔI NỀN DANH SÁCH SANG TÍM TỐI */
+        background-color: #240030;
         padding: 20px 40px;
         border-radius: 10px;
         border: 1px solid #00d4ff;
@@ -59,29 +69,34 @@
         font-weight: bold;
       }
       
+      /* Tô màu đặc biệt cho các mục "nhạy cảm" */
       ol li:nth-child(4), ol li:nth-child(5) {
           color: #ffdd00; 
       }
 
-      a {
-        color: #ffdd00;
+      /* --- LIÊN KẾT (LINK DẠNG CHỮ) --- */
+      a.text-link {
+        color: #ffdd00; /* Màu vàng cho link */
         text-decoration: none;
         font-weight: bold;
-        transition: all 0.3s ease; 
+        transition: all 0.3s ease; /* Hiệu ứng chuyển động mượt */
         border-bottom: 1px dotted #ffdd00;
       }
 
-      a:hover {
-        color: #00d4ff;
+      a.text-link:hover {
+        color: #00d4ff; /* Di chuột vào đổi sang màu xanh */
         border-bottom: 1px solid #00d4ff;
       }
+
+      /* --- CÁC KHỐI CHỨA (DIV) --- */
       .achievement-block, .footer-block {
         margin-top: 25px;
         padding: 20px;
-        background-color: #1a1a2e;
+        /* ĐỔI NỀN KHỐI CHỨA SANG TÍM ĐẬM */
+        background-color: #2e003e;
         border-radius: 10px;
         text-align: center;
-        border: 1px solid #333;
+        border: 1px solid #551a8b; /* Viền tím */
       }
       
       .highlight-span {
@@ -91,18 +106,41 @@
           color: #00d4ff;
       }
 
+      /* --- HÌNH ẢNH --- */
       img {
         border-radius: 10px;
-        border: 3px solid #ffdd00;
-        box-shadow: 0 0 15px rgba(255, 221, 0, 0.5); 
-        max-width: 100%; 
+        border: 3px solid #ffdd00; /* Viền vàng quanh ảnh */
+        box-shadow: 0 0 15px rgba(255, 221, 0, 0.5); /* Phát sáng vàng */
+        max-width: 100%; /* Ảnh tự co nhỏ trên điện thoại */
         height: auto;
         margin-bottom: 15px;
         transition: transform 0.3s ease;
       }
       
       img:hover {
-          transform: scale(1.02);
+          transform: scale(1.02); /* Phóng to nhẹ khi di chuột vào ảnh */
+      }
+
+      /* --- NÚT BẤM MỚI (BUTTON) --- */
+      .purple-button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 15px 30px;
+        background-color: #6a0080; /* Màu nền tím của nút */
+        color: #ffffff; /* Màu chữ trắng */
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+        border-radius: 50px; /* Bo tròn nút */
+        border: 2px solid #b400ff; /* Viền tím sáng */
+        box-shadow: 0 0 10px rgba(180, 0, 255, 0.5); /* Hiệu ứng phát sáng tím */
+        transition: all 0.3s ease;
+      }
+
+      .purple-button:hover {
+        background-color: #b400ff; /* Đổi màu nền khi di chuột */
+        box-shadow: 0 0 20px rgba(180, 0, 255, 0.8); /* Phát sáng mạnh hơn */
+        transform: translateY(-3px); /* Nút nảy lên nhẹ */
       }
     </style>
   </head>
@@ -128,4 +166,21 @@
       <span class="highlight-span">Cuối cùng đây là thành tựu đạt được của tôi:</span>
       
       <div class="achievement-block">
-        <a href="
+        <a href="https://www.facebook.com/profile.php?id=61558694875956&mibextid=ZbWKwL" target="_blank" class="text-link"> phát hiện Thiện đang lọ 😱</a>
+      </div>
+      
+      <div class="footer-block">
+        <img src="https://a.pinatafarm.com/600x333/4cecf4fb42/lord-farquaad.jpg" width="300" height="250" alt="Lord Farquaad meme" />
+        <p>Giới thiệu của tôi đến đây là hết. Nếu bạn có câu hỏi nào vui lòng bấm vào link dưới đây để đặt câu hỏi:</p>
+        
+        <a href="https://youtu.be/dQw4w9WgXcQ?si=vaeqZmypvXLRdKux" target="_blank" class="text-link"> Đặt câu hỏi tại đây? </a>
+        
+        <br><br>
+        
+        <a href="https://youtu.be/dQw4w9WgXcQ?si=qjbpqvsDDPrAUERC" target="_blank" class="purple-button">
+             Bấm vào đây để xem điều bất ngờ! 
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

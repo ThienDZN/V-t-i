@@ -1,34 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
-    <title>Người đàn ông lạnh nhất lúc này </title>
+    <title>Người đàn ông lạnh nhất lúc này</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif; 
+        background-color: #1a1a2e;
+        color: #e0e0e0;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .container {
+        background-color: #16213e; 
+        max-width: 800px;
+        width: 100%;
+        padding: 30px;
+        border-radius: 15px; 
+        box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+      }
+
+      h1 {
+        color: #00d4ff;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      }
+
+      h4 {
+        color: #ffdd00; 
+        border-bottom: 2px solid #00d4ff;
+        display: inline-block;
+        padding-bottom: 5px;
+        margin-top: 25px;
+      }
+      p {
+        margin-bottom: 15px;
+      }
+
+      ol {
+        background-color: #0f3460;
+        padding: 20px 40px;
+        border-radius: 10px;
+        border: 1px solid #00d4ff;
+      }
+
+      ol li {
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+      
+      ol li:nth-child(4), ol li:nth-child(5) {
+          color: #ffdd00; 
+      }
+
+      a {
+        color: #ffdd00;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s ease; 
+        border-bottom: 1px dotted #ffdd00;
+      }
+
+      a:hover {
+        color: #00d4ff;
+        border-bottom: 1px solid #00d4ff;
+      }
+      .achievement-block, .footer-block {
+        margin-top: 25px;
+        padding: 20px;
+        background-color: #1a1a2e;
+        border-radius: 10px;
+        text-align: center;
+        border: 1px solid #333;
+      }
+      
+      .highlight-span {
+          display: block;
+          margin-top: 30px;
+          font-weight: bold;
+          color: #00d4ff;
+      }
+
+      img {
+        border-radius: 10px;
+        border: 3px solid #ffdd00;
+        box-shadow: 0 0 15px rgba(255, 221, 0, 0.5); 
+        max-width: 100%; 
+        height: auto;
+        margin-bottom: 15px;
+        transition: transform 0.3s ease;
+      }
+      
+      img:hover {
+          transform: scale(1.02);
+      }
+    </style>
   </head>
   <body>
-    <h1>Thông Tin Về Thiện:</h1>
-   <h4>Tôi tên Nguyễn Minh Thiện</h3>
-   <p>Là sinh viên ngành ATTT đang học tại trường Đại học Sư Phạm Kỹ Thuật TP.HCM</br>
-      Là một người rất tinh tế và thân thiện với mọi người ,yêu thương động vật và hay rượt chó mèo.</br>
-      Tôi đến từ Tiền Giang.Và đây là đôi chút về việc thích làm của tôi.
-   </p>
-   <p>Danh việc thích làm của tôi gồm: </p>
-  <ol>
-  <li>Ăn</li>
-  <li>Ngủ</li>
-  <li>Lười</li>
-  <Li>JVA</Li>
-  <Li>Game</Li>
- </ol>
- <span>Cuối cùng đây là thành tựu đạt được của tôi:</span>
- <div>
- <a href=https://www.facebook.com/profile.php?id=61558694875956&mibextid=ZbWKwL>Thiện coi JVA bị phát hiện</a>
- </div>
- <div>
- <img src="https://a.pinatafarm.com/600x333/4cecf4fb42/lord-farquaad.jpg" width="300" height="250"/>
- <p> Giới thiệu của tôi đến đây là hết nếu bạn có câu hỏi nào vui lòng bấm vào link dưới đây để đặt câu hỏi:</p>
-  <a href="https://youtu.be/dQw4w9WgXcQ?si=vaeqZmypvXLRdKux">Đặt câu hỏi?</a>
- </div>
-  </body>
-</html>
+    <div class="container">
+      <h1>Thông Tin Về Thiện</h1>
+      <h4>Tôi tên Nguyễn Minh Thiện</h4>
+      <p>
+        Là sinh viên ngành ATTT đang học tại trường Đại học Sư Phạm Kỹ Thuật TP.HCM.<br />
+        Là một người rất tinh tế và thân thiện với mọi người, yêu thương động vật và hay rượt chó mèo.<br />
+        Tôi đến từ Tiền Giang. Và đây là đôi chút về việc thích làm của tôi.
+      </p>
+      
+      <p>Danh sách việc thích làm của tôi gồm:</p>
+      <ol>
+        <li>Ăn</li>
+        <li>Ngủ</li>
+        <li>Lười</li>
+        <li style="text-transform: uppercase;">JVA</li>
+        <li>Game</li>
+      </ol>
+      
+      <span class="highlight-span">Cuối cùng đây là thành tựu đạt được của tôi:</span>
+      
+      <div class="achievement-block">
+        <a href="

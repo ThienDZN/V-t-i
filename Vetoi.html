@@ -12,7 +12,7 @@
         font-family: 'Roboto', sans-serif;
         /* Nền Gradient Tím Đen Huyền Bí */
         background: linear-gradient(135deg, #240030 0%, #0f0014 100%);
-        color: #ffffff; /* CHỮ MÀU TRẮNG TINH THEO YÊU CẦU */
+        color: #ffffff; /* CHỮ MÀU TRẮNG TINH */
         line-height: 1.6;
         margin: 0;
         padding: 20px;
@@ -24,40 +24,41 @@
 
       /* Khung chứa nội dung */
       .container {
-        background-color: rgba(46, 0, 62, 0.9); /* Tím đậm bán trong suốt */
+        background-color: rgba(46, 0, 62, 0.9);
         max-width: 800px;
         width: 100%;
         padding: 40px 30px;
         border-radius: 20px;
-        border: 2px solid #5e0080; /* Viền tím vừa phải */
+        border: 2px solid #5e0080;
         box-shadow: 0 0 40px rgba(94, 0, 128, 0.5);
       }
 
       /* --- TIÊU ĐỀ CHÍNH (VUA LỌ) --- */
       h1 {
-        color: #ffd700; /* MÀU VÀNG KIM */
+        color: #ffd700; /* VÀNG KIM - Giữ nguyên cho quyền lực */
         text-align: center;
         text-transform: uppercase;
-        font-weight: 900; /* Siêu đậm */
-        font-size: 2.5rem; /* Chữ to đùng */
+        font-weight: 900;
+        font-size: 2.5rem;
         margin-bottom: 20px;
         letter-spacing: 2px;
-        /* HIỆU ỨNG VIỀN SÁNG RỰC RỠ (GLOW) */
         text-shadow: 
-            0 0 10px rgba(255, 215, 0, 0.7), /* Lớp sáng vàng bên trong */
-            0 0 20px rgba(255, 165, 0, 0.6), /* Lớp sáng cam bên ngoài */
-            0 0 40px rgba(255, 0, 0, 0.4);   /* Lớp sáng đỏ xa nhất */
+            0 0 10px rgba(255, 215, 0, 0.7),
+            0 0 20px rgba(255, 165, 0, 0.6),
+            0 0 40px rgba(255, 0, 0, 0.4);
       }
 
-      /* Tiêu đề phụ */
+      /* --- TIÊU ĐỀ PHỤ (ĐÃ ĐỔI MÀU) --- */
       h4 {
-        color: #00ffff; /* Xanh Cyan sáng chói */
-        border-bottom: 2px solid #00ffff;
+        /* ĐỔI TỪ XANH SANG HỒNG TÍM NEON (Hợp tông tím hơn) */
+        color: #f09eff; 
+        border-bottom: 2px solid #f09eff;
         display: inline-block;
         padding-bottom: 5px;
         margin-top: 15px;
         font-size: 1.4rem;
-        text-shadow: 0 0 5px #008b8b;
+        /* Bóng đổ màu tím hồng */
+        text-shadow: 0 0 10px rgba(240, 158, 255, 0.6);
       }
 
       /* --- ĐOẠN VĂN & LIST --- */
@@ -67,27 +68,24 @@
       }
 
       ol {
-        background-color: #1a0024; /* Nền danh sách tối hơn chút */
+        background-color: #1a0024;
         padding: 20px 20px 20px 50px;
         border-radius: 10px;
-        border: 1px solid #ffffff; /* Viền trắng mảnh */
+        border: 1px solid #ffffff;
       }
 
       ol li {
         margin-bottom: 10px;
-        font-weight: normal; /* Chữ thường */
+        /* ĐÃ ĐỔI: Chữ trắng toàn bộ, không còn màu đỏ */
+        color: #ffffff; 
+        font-weight: normal;
       }
       
-      /* Riêng mấy chữ Lọ thì cho màu khác để nhấn mạnh (nếu muốn) 
-         Hoặc để trắng luôn thì xóa đoạn color bên dưới đi */
-      ol li:nth-child(4), ol li:nth-child(5), ol li:nth-child(6) {
-          color: #ff5e5e; /* Màu đỏ nhẹ cảnh báo */
-          font-weight: bold;
-      }
+      /* (Đã xóa đoạn code tô màu đỏ cho các dòng 4,5,6) */
 
       /* --- LIÊN KẾT --- */
       a.text-link {
-        color: #ffd700; /* Link màu vàng */
+        color: #ffd700;
         text-decoration: none;
         font-weight: bold;
         transition: all 0.3s ease;
@@ -106,7 +104,7 @@
         background: #3c0052;
         border-radius: 12px;
         text-align: center;
-        border: 1px solid #ffd700; /* Viền vàng */
+        border: 1px solid #ffd700;
       }
 
       .footer-block {
@@ -114,12 +112,14 @@
         text-align: center;
       }
 
+      /* --- DÒNG HIGHLIGHT (ĐÃ ĐỔI MÀU) --- */
       .highlight-span {
           display: block;
           margin-top: 30px;
           font-weight: bold;
           font-size: 1.2rem;
-          color: #00ffff; /* Màu xanh nổi bật */
+          /* Đổi sang màu hồng tím giống thẻ h4 */
+          color: #f09eff; 
       }
 
       /* --- ẢNH --- */
@@ -136,27 +136,27 @@
           transform: scale(1.02);
       }
 
-      /* --- NÚT BẤM (BUTTON) --- */
+      /* --- NÚT BẤM --- */
       .purple-button {
         display: inline-block;
         margin-top: 25px;
         padding: 16px 40px;
-        background-color: #6a0080; /* Tím */
+        background-color: #6a0080;
         color: #ffffff;
         text-decoration: none;
         font-weight: bold;
         font-size: 18px;
         text-transform: uppercase;
         border-radius: 50px;
-        border: 2px solid #ffd700; /* Viền vàng */
+        border: 2px solid #ffd700;
         box-shadow: 0 0 10px rgba(106, 0, 128, 0.5);
         transition: all 0.3s ease;
       }
 
       .purple-button:hover {
-        background-color: #ffd700; /* Di chuột vào thành nền vàng */
-        color: #2e003e; /* Chữ tím đen */
-        box-shadow: 0 0 25px rgba(255, 215, 0, 0.8); /* Phát sáng mạnh */
+        background-color: #ffd700;
+        color: #2e003e;
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.8);
         transform: translateY(-3px);
       }
     </style>
@@ -172,7 +172,7 @@
         Tôi đến từ Tiền Giang. Và đây là đôi chút về việc thích làm của tôi.
       </p>
       
-      <p style="font-weight: bold; color: #ffd700;">Danh sách việc thích làm của ta gồm:</p>
+      <p style="font-weight: bold; color: #f09eff;">Danh sách việc thích làm của ta gồm:</p>
       <ol>
         <li>Ăn</li>
         <li>Ngủ</li>
